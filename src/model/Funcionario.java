@@ -1,15 +1,25 @@
 package model;
 
-public class Funcionario {
+import interfaces.Trabalhador;
+
+
+public abstract class Funcionario  implements   Trabalhador {
  private    String nome;
   private   String cpf;
   private   String dataNascimento;
 
-  public void trabalhar(){
-  }
 
-  public void baterponto(){
-  }
+      public abstract void trabalhar();
+
+      @Override
+      public void baterPonto(){
+          System.out.println("ponto registrado");
+      }
+
+
+
+
+
 
 
 
@@ -17,6 +27,7 @@ public class Funcionario {
       this.nome =nome;
       this.cpf = cpf;
       this.dataNascimento = dataNascimento;
+
 
 
 
